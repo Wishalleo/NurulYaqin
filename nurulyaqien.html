@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pondok Pesantren Nurul Yaqin</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
+        }
+
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: #22c55e;
+            margin: 12px auto 0;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+
+<body class="scroll-smooth">
+    <nav id="mainNav" class="bg-transparent fixed w-full top-0 z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <img src="logo-panjang.png" alt="Logo PP Nurul Yaqin" class="h-10 w-25 mr-2">
+
+                </div>
+                <div id="navLinksContainer" class="hidden md:flex items-center space-x-6">
+                    <a href="#profil"
+                        class="nav-link text-white hover:text-green-200 transition-all duration-300 border-b-2 border-transparent">Profil</a>
+                    <a href="#visi-misi"
+                        class="nav-link text-white hover:text-green-200 transition-all duration-300 border-b-2 border-transparent">Visi
+                        &
+                        Misi</a>
+                    <a href="#prestasi"
+                        class="nav-link text-white hover:text-green-200 transition-all duration-300 border-b-2 border-transparent">Prestasi</a>
+                    <a href="#berita"
+                        class="nav-link text-white hover:text-green-200 transition-all duration-300 border-b-2 border-transparent">Berita</a>
+                    <a href="info-pendaftaran.html"
+                        class="text-white hover:text-green-200 transition-all duration-300 border-b-2 border-transparent">Info
+                        Pendaftaran</a>
+
+                    <a id="navLoginButton" href="#"
+                        class="bg-green-500 text-white px-5 py-2 rounded-full hover:bg-green-600 transition">Login</a>
+                </div>
+                <button id="navMobileButton" onclick="toggleMenu()"
+                    class="md:hidden text-white transition-colors duration-300">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobileMenu"
+            class="hidden md:hidden bg-green-700 border-t border-green-600 transition-colors duration-300">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#profil" onclick="toggleMenu()"
+                    class="block px-3 py-2 text-white hover:bg-green-600 rounded">Profil</a>
+                <a href="#visi-misi" onclick="toggleMenu()"
+                    class="block px-3 py-2 text-white hover:bg-green-600 rounded">Visi & Misi</a>
+                <a href="#prestasi" onclick="toggleMenu()"
+                    class="block px-3 py-2 text-white hover:bg-green-600 rounded">Prestasi</a>
+                <a href="#berita" onclick="toggleMenu()"
+                    class="block px-3 py-2 text-white hover:bg-green-600 rounded">Berita</a>
+                <a href="info-pendaftaran.html" onclick="toggleMenu()"
+                    class="block px-3 py-2 text-white hover:bg-green-600 rounded">Info Pendaftaran</a>
+                <a href="#" onclick="toggleMenu()"
+                    class="block px-3 py-2 bg-blue-600 text-white text-center rounded-full">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative h-screen flex items-center overflow-hidden"
+        style="background-image: url('ponpes.png'); background-size: cover; background-position: center;">
+        <div class="absolute inset-0 bg-blue-900/75 z-10"></div>
+
+        <div class="relative z-20 text-white max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-0">
+            <div class="md:w-3/5 lg:w-1/2 text-left">
+                <div class="flex items-center mb-6">
+                    <img src="logo.jpeg" alt="Logo Pondok" class="h-16 w-16 mr-4 rounded-full border-2 border-white">
+                </div>
+
+                <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-6">
+                    Pondok Pesantren<br><span class="text-green-300">Nurul Yaqin</span>
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 leading-relaxed">
+                    Membentuk generasi berakhlak mulia, berilmu, dan berprestasi. Wadah pengembangan intelektual santri
+                    dalam kajian ilmu agama dan pembinaan akhlak.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#profil"
+                        class="bg-green-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-green-700 transition text-lg">
+                        Info Pendaftaran
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 text-white animate-bounce z-20">
+            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+        </div>
+    </section>
+
+
+    <section id="profil" class="py-20 px-4 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-3 section-title">Profil Pesantren</h2>
+            <p class="text-center text-gray-600 mb-12">Mengenal lebih dekat Pondok Pesantren Nurul Yaqin</p>
+
+            <div class="grid md:grid-cols-2 gap-12 items-start">
+                <div
+                    class="bg-gradient-to-br from-green-100 to-green-200 rounded-2xl h-80 md:h-full flex items-center justify-center sticky top-24">
+
+                </div>
+
+                <div>
+                    <h3 class="text-3xl font-bold text-gray-800 mb-4">Sejarah Singkat</h3>
+                    <div class="space-y-4 text-gray-600 leading-relaxed">
+                        <p>
+                            Dalam rangka membina dan membentuk generasi muda yang beriman dan bertakwa serta terampil
+                            dalam
+                            masyarakat dan ikut berperan serta membangun manusia seutuhnya. Pondok Pesantren Nurul
+                            Yaqin,
+                            Desa. Durian Lecah, Kec. Sungai Manau Merangin Jambi, berdiri pada tahun 1957 M /1377 H yang
+                            didirikan oleh KH. Abdurrahman Salam.
+                        </p>
+                        <p>
+                            Pada awalnya pondok pesantren ini hanya memiliki dua orang santri. Seiring berjalannya
+                            zaman,
+                            santri mulai berdatangan dari berbagai penjuru Indonesia. setelah berjalannya pendidikan
+                            di
+                            Pondok Pesantren ini. akhirnya bisa meluluskan alumni pertama dan alumni ini diangkat
+                            sebagai
+                            tenaga pendidik.
+                        </p>
+                    </div>
+
+                    <h4 class="text-2xl font-bold text-gray-800 mt-10 mb-4">Pimpinan Pondok dari Masa ke Masa</h4>
+                    <div class="space-y-2">
+                        <div class="flex items-center text-gray-700">
+                            <span class="mdi mdi-chevron-right text-green-600 mr-2"></span>
+                            <strong>KH. Abdur Rahman Salam </strong> (Pendiri-2004)
+                        </div>
+                        <div class="flex items-center text-gray-700">
+                            <span class="mdi mdi-chevron-right text-green-600 mr-2"></span>
+                            <strong>KH. Ahmad Sabri AR </strong> (2004-Sekarang)
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4 mt-10">
+                        <div class="bg-green-50 p-4 rounded-lg text-center shadow-sm">
+                            <p class="text-3xl font-bold text-green-600">1000+</p>
+                            <p class="text-gray-600">Alumni</p>
+                        </div>
+                        <div class="bg-green-50 p-4 rounded-lg text-center shadow-sm">
+                            <p class="text-3xl font-bold text-green-600">50+</p>
+                            <p class="text-gray-600">Tenaga Pengajar</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-20 pt-12 border-t border-gray-200">
+
+                <div class="grid md:grid-cols-2 gap-12 items-start">
+
+                    <div class="bg-gray-50 p-8 rounded-2xl shadow-lg">
+                        <h3 class="text-3xl font-bold text-gray-800 mb-4">Kurikulum</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Pondok Pesantren Nurul Yaqin memadukan kurikulum salafiyah dan kementerian agama, yang mana
+                            sistem Kegiatan Belajar Mengajar (KBM) pagi dan sore serta diikuti dengan kegiatan
+                            extrakurikuler yang bermanfaat bagi masyarakat dalam kehidupan sehari-hari dengan bimbingan
+                            majelis guru untuk mencapai target sesuai Visi dan Misi Pondok Pesantren Nurul Yaqin.
+                        </p>
+                    </div>
+
+                    <div class="bg-green-50 p-8 rounded-2xl shadow-lg">
+                        <h3 class="text-3xl font-bold text-green-700 mb-4">Program Unggulan</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-center text-gray-700 text-lg">
+                                <svg class="w-6 h-6 text-green-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                Kajian Kitab Kuning
+                            </li>
+                            <li class="flex items-center text-gray-700 text-lg">
+                                <svg class="w-6 h-6 text-green-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                Mts & MA Terakreditasi
+                            </li>
+                            <li class="flex items-center text-gray-700 text-lg">
+                                <svg class="w-6 h-6 text-green-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+
+                                </svg>
+                                Hafizh & Tahsin Al-Qur’an
+                            </li>
+                            <li class="flex items-center text-gray-700 text-lg">
+                                <svg class="w-6 h-6 text-green-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                Bhs Arab & Inggris
+                            </li>
+                            <li class="flex items-center text-gray-700 text-lg">
+                                <svg class="w-6 h-6 text-green-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                Komputer
+                            </li>
+                            <li class="flex items-center text-gray-700 text-lg">
+                                <svg class="w-6 h-6 text-green-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                Pelatihan Las
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="visi-misi" class="py-20 px-4 bg-green-50">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-3 section-title">Visi & Misi</h2>
+            <p class="text-center text-gray-600 mb-12">Arah dan tujuan Pondok Pesantren Nurul Yaqin</p>
+
+            <div class="bg-gradient-to-br from-green-200 to-green-300 p-10 rounded-2xl shadow-lg text-center mb-16">
+                <div
+                    class="w-20 h-20 bg-white rounded-full flex items-center justify-center mb-6 mx-auto border-4 border-green-400">
+                    <svg class="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z">
+                        </path>
+                    </svg>
+                </div>
+                <h3 class="text-3xl font-bold mb-4 text-gray-800">Visi Kami</h3>
+                <p class="text-xl text-gray-700 italic max-w-3xl mx-auto">
+                    "Menjadi lembaga pendidikan Islam terdepan yang mencetak generasi muslim berakhlakul karimah,
+                    berilmu pengetahuan luas, dan memiliki keterampilan bermanfaat untuk kehidupan bermasyarakat."
+                </p>
+            </div>
+
+            <h3 class="text-3xl font-bold text-center text-gray-800 mb-12">Misi Kami</h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-lg text-center transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-800 mb-3">Pendidikan Berkualitas</h4>
+                    <p class="text-gray-600">
+                        Menyelenggarakan pendidikan Islam berkualitas dan terpadu.
+                    </p>
+                </div>
+
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-lg text-center transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-800 mb-3">Pembentukan Karakter</h4>
+                    <p class="text-gray-600">
+                        Membentuk karakter santri berakhlak mulia dan bertaqwa.
+                    </p>
+                </div>
+
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-lg text-center transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-800 mb-3">Pengembangan Potensi</h4>
+                    <p class="text-gray-600">
+                        Mengembangkan potensi santri melalui kegiatan kurikuler dan ekstrakurikuler.
+                    </p>
+                </div>
+
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-lg text-center transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-800 mb-3">Persiapan Kepemimpinan</h4>
+                    <p class="text-gray-600">
+                        Mempersiapkan santri menjadi pemimpin umat yang amanah.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="prestasi" class="py-20 px-4 bg-slate-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center">
+                <div
+                    class="w-20 h-20 bg-green-400 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                    <span class="mdi mdi-trophy-variant-outline text-white text-4xl"></span>
+                </div>
+                <h2 class="text-4xl font-bold text-green-900 mb-3">Prestasi & Pencapaian</h2>
+                <div class="w-24 h-1 bg-green-400 mx-auto mb-8 rounded-full"></div>
+                <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+                    Berbagai pencapaian dan prestasi yang telah diraih Pondok Pesantren Nurul Yaqin dalam berbagai
+                    kompetisi dan kegiatan pengembangan keilmuan.
+                </p>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-4 mb-16">
+                <button
+                    class="px-7 py-2.5 rounded-full bg-green-400 text-white font-semibold shadow-md transition-all duration-300">Semua</button>
+                <button
+                    class="px-7 py-2.5 rounded-full bg-white text-green-400 font-semibold border-2 border-green-400 transition-all duration-300 hover:bg-green-50">Kompetisi</button>
+                <button
+                    class="px-7 py-2.5 rounded-full bg-white text-green-400 font-semibold border-2 border-green-400 transition-all duration-300 hover:bg-green-50">Akademik</button>
+                <button
+                    class="px-7 py-2.5 rounded-full bg-white text-green-400 font-semibold border-2 border-green-400 transition-all duration-300 hover:bg-green-50">Penghargaan</button>
+                <button
+                    class="px-7 py-2.5 rounded-full bg-white text-green-400 font-semibold border-2 border-green-400 transition-all duration-300 hover:bg-green-50">Esai</button>
+                <button
+                    class="px-7 py-2.5 rounded-full bg-white text-green-400 font-semibold border-2 border-green-400 transition-all duration-300 hover:bg-green-50">Debat</button>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
+
+                <div
+                    class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col transform transition-transform duration-300 hover:-translate-y-2">
+                    <img src="https://via.placeholder.com/400x250/cccccc/888888?text=Prestasi+1" alt="Pemakalah Terbaik"
+                        class="w-full h-48 object-cover">
+
+                    <div class="px-8 mb-5">
+                        <div
+                            class="w-16 h-16 bg-green-400 rounded-full flex items-center justify-center -mt-16 mb-4 shadow-lg">
+                            <span class="mdi mdi-medal-outline text-white text-3xl"></span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-green-900 mb-2">Pemakalah Terbaik</h3>
+                        <a href="#" class="text-green-600 font-semibold text-sm mb-4 inline-block">Akademik</a>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Terpilih sebagai pemakalah terbaik dalam seminar ilmiah bertema peradaban hijau, yang
+                            diadakan
+                            oleh Institut Hijau Indonesia.
+                        </p>
+                    </div>
+                    <div class="p-8 pt-0  flex-grow border-gray-200">
+                        <ul class="space-y-3 text-sm text-gray-500">
+                            <li class="flex items-center">
+                                <span class="mdi mdi-calendar-blank-outline w-5 mr-3"></span>
+                                Webinar & Call for Papers Jurnal Peradaban Hijau
+                            </li>
+                            <li class="flex items-center">
+                                <span class="mdi mdi-calendar w-5 mr-3"></span>
+                                2025
+                            </li>
+                            <li class="flex items-center">
+                                <span class="mdi mdi-school-outline w-5 mr-3"></span>
+                                Institut Hijau Indonesia
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col transform transition-transform duration-300 hover:-translate-y-2">
+                    <img src="https://via.placeholder.com/400x250/cccccc/888888?text=Prestasi+2" alt="Juara News Anchor"
+                        class="w-full h-48 object-cover">
+
+                    <div class="px-8 mb-5">
+                        <div
+                            class="w-16 h-16 bg-green-400 rounded-full flex items-center justify-center -mt-16 mb-4 shadow-lg">
+                            <span class="mdi mdi-trophy-award text-white text-3xl"></span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-green-900 mb-2">Juara 3 News Anchor</h3>
+                        <a href="#" class="text-green-600 font-semibold text-sm mb-4 inline-block">Kompetisi</a>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Mendapatkan juara 3 dalam kategori News Anchor tingkat nasional pada ajang Semarak Kompetisi
+                            Jurnalistik, menampilkan keterampilan membaca berita.
+                        </p>
+                    </div>
+                    <div class="p-8 pt-0  flex-grow">
+                        <ul class="space-y-3 text-sm text-gray-500">
+                            <li class="flex items-center">
+                                <span class="mdi mdi-calendar-blank-outline w-5 mr-3"></span>
+                                Semarak Kompetisi Jurnalistik
+                            </li>
+                            <li class="flex items-center">
+                                <span class="mdi mdi-calendar w-5 mr-3"></span>
+                                2025
+                            </li>
+                            <li class="flex items-center">
+                                <span class="mdi mdi-map-marker-outline w-5 mr-3"></span>
+                                Nasional
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col transform transition-transform duration-300 hover:-translate-y-2">
+                    <img src="https://via.placeholder.com/400x250/cccccc/888888?text=Prestasi+3" alt="Best Speaker"
+                        class="w-full h-48 object-cover">
+
+                    <div class="px-8 mb-5">
+                        <div
+                            class="w-16 h-16 bg-green-400 rounded-full flex items-center justify-center -mt-16 mb-4 shadow-lg">
+                            <span class="mdi mdi-account-voice text-white text-3xl"></span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-green-900 mb-2">Best Speaker</h3>
+                        <a href="#" class="text-green-600 font-semibold text-sm mb-4 inline-block">Debat</a>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Dinobatkan sebagai pembicara terbaik berkat kemampuan penyampaian argumen, logika, dan
+                            public
+                            speaking di ajang KDMI.
+                            </L>
+                    </div>
+                    <div class="p-8 pt-0  flex-grow">
+                        <ul class="space-y-3 text-sm text-gray-500">
+                            <li class="flex items-center">
+                                <span class="mdi mdi-calendar-blank-outline w-5 mr-3"></span>
+                                Kompetisi Debat Mahasiswa Indonesia (KDMI)
+                            </li>
+                            <li class="flex items-center">
+                                <span class="mdi mdi-calendar w-5 mr-3"></span>
+                                2025
+                            </li>
+                            <li class="flex items-center">
+                                <span class="mdi mdi-school-outline w-5 mr-3"></span>
+                                Universitas Jember
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="berita" class="py-20 px-4 bg-green-50">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-3 section-title">Berita Terkini</h2>
+            <p class="text-center text-gray-600 mb-12">Update terbaru dari Pondok Pesantren Nurul Yaqin</p>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover-scale">
+                    <div class="bg-gradient-to-br from-green-200 to-green-300 h-48 flex items-center justify-center">
+
+                    </div>
+                    <div class="p-6">
+                        <span class="text-sm text-green-600 font-semibold">10 November 2025</span>
+                        <h3 class="text-xl font-bold text-gray-800 my-3">Pembukaan Pendaftaran Santri Baru</h3>
+                        <p class="text-gray-600 mb-4">Pendaftaran santri baru tahun ajaran 2025-2026 telah dibuka untuk
+                            gelombang pertama.</p>
+                        <a href="#pendaftaran" class="text-green-600 font-semibold hover:text-green-700">Baca
+                            selengkapnya →</a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover-scale">
+                    <div class="bg-gradient-to-br from-green-200 to-green-300 h-48 flex items-center justify-center">
+
+                    </div>
+                    <div class="p-6">
+                        <span class="text-sm text-green-600 font-semibold">5 November 2025</span>
+                        <h3 class="text-xl font-bold text-gray-800 my-3">Kegiatan Haflah Akhirussanah</h3>
+                        <p class="text-gray-600 mb-4">Penutupan tahun ajaran dengan berbagai penampilan santri dan
+                            pengumuman prestasi.</p>
+                        <a href="#" class="text-green-600 font-semibold hover:text-green-700">Baca selengkapnya →</a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover-scale">
+                    <div class="bg-gradient-to-br from-green-200 to-green-300 h-48 flex items-center justify-center">
+
+                    </div>
+                    <div class="p-6">
+                        <span class="text-sm text-green-600 font-semibold">1 November 2025</span>
+                        <h3 class="text-xl font-bold text-gray-800 my-3">Kunjungan Alumni Santri</h3>
+                        <p class="text-gray-600 mb-4">Silaturahmi dengan alumni yang kini telah sukses di berbagai
+                            bidang.</p>
+                        <a href="#" class="text-green-600 font-semibold hover:text-green-700">Baca selengkapnya →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-gray-300 py-12 px-4">
+        <div class="max-w-7xl mx-auto text-center">
+            <span class="text-2xl font-bold text-white">PP Nurul Yaqin</span>
+            <p class="my-4">Membentuk generasi berakhlak mulia, berilmu, dan berprestasi.</p>
+            <div class="flex justify-center space-x-6">
+                <a href="#profil" class="hover:text-white">Profil</a>
+                <a href="#pendaftaran" class="hover:text-white">Pendaftaran</a>
+                <a href="#berita" class="hover:text-white">Berita</a>
+            </div>
+            <p class="mt-8 text-sm text-gray-400">
+                &copy; 2025 Pondok Pesantren Nurul Yaqin. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
+    <script>
+        // Fungsi untuk toggle menu mobile
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // --- SCRIPT UNTUK NAVIGASI SCROLL ---
+        window.addEventListener('scroll', function () {
+            const nav = document.getElementById('mainNav');
+            const logoText = document.getElementById('navLogoText');
+            const navLinks = document.querySelectorAll('#navLinksContainer a:not(.bg-blue-600)'); // Dapatkan link, kecuali tombol login
+            const mobileButton = document.getElementById('navMobileButton');
+            const mobileMenuBg = document.getElementById('mobileMenu');
+
+            if (window.scrollY > 50) {
+                // --- Saat di-scroll ---
+                // Ubah background nav utama
+                nav.classList.add('bg-white', 'shadow-md');
+                nav.classList.remove('bg-transparent');
+
+                // Ubah warna teks logo
+                logoText.classList.add('text-green-600');
+                logoText.classList.remove('text-white');
+
+                // Ubah warna tombol menu mobile
+                mobileButton.classList.add('text-gray-700');
+                mobileButton.classList.remove('text-white');
+
+                // Ubah warna background menu mobile (saat dibuka)
+                mobileMenuBg.classList.add('bg-white');
+                mobileMenuBg.classList.remove('bg-green-700');
+
+                // Ubah warna semua link di nav
+                navLinks.forEach(link => {
+                    link.classList.add('text-gray-700', 'hover:text-green-600');
+                    link.classList.remove('text-white', 'hover:text-green-200');
+                });
+
+            } else {
+                // --- Saat di paling atas ---
+                // Kembalikan background nav utama
+                nav.classList.remove('bg-white', 'shadow-md');
+                nav.classList.add('bg-transparent');
+
+                // Kembalikan warna teks logo
+                logoText.classList.remove('text-green-600');
+                logoText.classList.add('text-white');
+
+                // Kembalikan warna tombol menu mobile
+                mobileButton.classList.remove('text-gray-700');
+                mobileButton.classList.add('text-white');
+
+                // Kembalikan background menu mobile
+                mobileMenuBg.classList.remove('bg-white');
+                mobileMenuBg.classList.add('bg-green-700');
+
+                // Kembalikan warna semua link di nav
+                navLinks.forEach(link => {
+                    link.classList.remove('text-gray-700', 'hover:text-green-600');
+                    link.classList.add('text-white', 'hover:text-green-200');
+                });
+            }
+        });
+    </script>
+    <script>
+        // Fungsi untuk toggle menu mobile
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // --- SCRIPT UNTUK NAVIGASI SCROLL ---
+
+        const sections = document.querySelectorAll('section[id]');
+        const spyLinks = document.querySelectorAll('a.nav-link[href^="#"]');
+
+        window.addEventListener('scroll', function () {
+
+            const nav = document.getElementById('mainNav');
+
+            // PERBAIKAN: Menghapus "logoText" karena sudah diganti gambar
+            // const logoText = document.getElementById('navLogoText'); 
+
+            // Selector ini sudah benar, mengabaikan tombol Login
+            const navLinksForColor = document.querySelectorAll('#navLinksContainer a:not(#navLoginButton)');
+
+            const mobileButton = document.getElementById('navMobileButton');
+            const mobileMenuBg = document.getElementById('mobileMenu');
+            const isScrolled = window.scrollY > 50;
+
+            // Ubah background nav utama
+            nav.classList.toggle('bg-white', isScrolled);
+            nav.classList.toggle('shadow-md', isScrolled);
+            nav.classList.toggle('bg-transparent', !isScrolled);
+
+            // PERBAIKAN: Blok untuk mengubah warna logoText dihapus
+
+            // Ubah warna tombol menu mobile
+            mobileButton.classList.toggle('text-gray-700', isScrolled);
+            mobileButton.classList.toggle('text-white', !isScrolled);
+
+            // Ubah warna background menu mobile (saat dibuka)
+            mobileMenuBg.classList.toggle('bg-white', isScrolled);
+            mobileMenuBg.classList.toggle('bg-green-700', !isScrolled);
+
+            // Mengubah warna link (Profil, Visi, dll.) TAPI mengabaikan tombol Login
+            navLinksForColor.forEach(link => {
+                link.classList.toggle('text-gray-700', isScrolled);
+                link.classList.toggle('hover:text-green-600', isScrolled);
+                link.classList.toggle('text-white', !isScrolled);
+                link.classList.toggle('hover:text-green-200', !isScrolled);
+            });
+
+            // --- Bagian 2: Logika Scroll Spy (Active Link Underline) ---
+
+            let currentSectionId = "";
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (window.scrollY >= sectionTop - 150) {
+                    currentSectionId = section.getAttribute('id');
+                }
+            });
+
+            spyLinks.forEach(link => {
+                link.classList.remove('border-white', 'border-green-600');
+                link.classList.add('border-transparent');
+
+                if (link.getAttribute('href') === '#' + currentSectionId) {
+                    link.classList.remove('border-transparent');
+
+                    if (isScrolled) {
+                        link.classList.add('border-green-600'); // Garis bawah saat nav putih
+                    } else {
+                        link.classList.add('border-white'); // Garis bawah saat nav transparan
+                    }
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>

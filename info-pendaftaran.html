@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pondok Pesantren Nurul Yaqin</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
+        }
+
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: #22c55e;
+            margin: 12px auto 0;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+
+<body class="scroll-smooth">
+    <nav class="bg-white shadow-md fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold text-green-600">PP Nurul Yaqin</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="#profil" class="text-gray-700 hover:text-green-600 transition">Profil</a>
+                    <a href="#visi-misi" class="text-gray-700 hover:text-green-600 transition">Visi & Misi</a>
+                    <a href="#prestasi" class="text-gray-700 hover:text-green-600 transition">Prestasi</a>
+                    <a href="#berita" class="text-gray-700 hover:text-green-600 transition">Berita</a>
+
+                    <a href="info-pendaftaran.html" class="text-gray-700 hover:text-green-600 transition">Info
+                        Pendaftaran</a>
+
+                    <a href="#pendaftaran"
+                        class="bg-green-500 text-white px-5 py-2 rounded-full hover:bg-green-600 transition">Daftar</a>
+                </div>
+                <button onclick="toggleMenu()" class="md:hidden text-gray-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#profil" onclick="toggleMenu()"
+                    class="block px-3 py-2 text-gray-700 hover:bg-green-50 rounded">Profil</a>
+                <a href="#visi-misi" onclick="toggleMenu()"
+                    class="block px-3 py-2 text-gray-700 hover:bg-green-50 rounded">Visi & Misi</a>
+                <a href="#prestasi" onclick="toggleMenu()"
+                    class="block px-3 py-2 text-gray-700 hover:bg-green-50 rounded">Prestasi</a>
+                <a href="#berita" onclick="toggleMenu()"
+                    class="block px-3 py-2 text-gray-700 hover:bg-green-50 rounded">Berita</a>
+                <a href="#pendaftaran" onclick="toggleMenu()"
+                    class="block px-3 py-2 bg-green-500 text-white text-center rounded-full">Daftar</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="pendaftaran" class="py-20 px-4 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-3 section-title">Informasi Pendaftaran</h2>
+            <p class="text-center text-gray-600 mb-12">Tahun Ajaran 2025-2026 M / 1446-1447 H</p>
+
+            <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8 mb-12 text-center">
+                <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+                    Pondok Pesantren Nurul Yaqin kembali membuka pendaftaran Santri dan Santriwati baru Tahun Ajaran
+                    2025-2026 M / 1446-1447 H. Simak ketentuannya berikut.
+                </p>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-lg p-8 mb-8">
+                <h3 class="text-2xl font-bold text-gray-800 mb-6">Persyaratan Umum</h3>
+                <div class="space-y-3">
+                    <div class="flex items-start">
+                        <span
+                            class="bg-green-500 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm font-bold mr-3 mt-0.5 flex-shrink-0">1</span>
+                        <p class="text-gray-700">Mengisi Formulir dan Surat Pernyataan Siap Mengikuti Semua Peraturan
+                            yang Telah Ditentukan</p>
+                    </div>
+                    <div class="flex items-start">
+                        <span
+                            class="bg-green-500 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm font-bold mr-3 mt-0.5 flex-shrink-0">2</span>
+                        <p class="text-gray-700">Photocopy Ijazah Terakhir yang Sudah Dilegalisir 3 Lembar</p>
+                    </div>
+                    <div class="flex items-start">
+                        <span
+                            class="bg-green-500 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm font-bold mr-3 mt-0.5 flex-shrink-0">3</span>
+                        <p class="text-gray-700">Pas Photo 2x3 (3 Lembar) dan 4x6 (3 Lembar)</p>
+                    </div>
+                    <div class="flex items-start">
+                        <span
+                            class="bg-green-500 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm font-bold mr-3 mt-0.5 flex-shrink-0">4</span>
+                        <p class="text-gray-700">Photocopy Kartu Keluarga (KK) 3 Lembar</p>
+                    </div>
+                    <div class="flex items-start">
+                        <span
+                            class="bg-green-500 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm font-bold mr-3 mt-0.5 flex-shrink-0">5</span>
+                        <p class="text-gray-700">Mengisi Formulir yang Sudah Disediakan Panitia</p>
+                    </div>
+                    <div class="flex items-start">
+                        <span
+                            class="bg-green-500 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm font-bold mr-3 mt-0.5 flex-shrink-0">6</span>
+                        <p class="text-gray-700">Membayar Uang Pendaftaran</p>
+                    </div>
+                    <div class="flex items-start">
+                        <span
+                            class="bg-green-500 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm font-bold mr-3 mt-0.5 flex-shrink-0">7</span>
+                        <p class="text-gray-700">Surat Mutasi Pindah dan Surat Berkelakuan Baik (SKB) dari Sekolah
+                            Sebelumnya Bagi yang Transfer (Pindahan)</p>
+                    </div>
+                    <div class="flex items-start">
+                        <span
+                            class="bg-green-500 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm font-bold mr-3 mt-0.5 flex-shrink-0">8</span>
+                        <p class="text-gray-700">Mengikuti Seleksi Penerimaan Santri Baru</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+                <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Waktu Pendaftaran</h3>
+                    <div class="space-y-4">
+                        <div class="bg-white p-4 rounded-lg">
+                            <p class="font-bold text-green-600 mb-1">Gelombang Pertama</p>
+                            <p class="text-gray-700">24 Maret 2025 - 31 Mei 2025</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg">
+                            <p class="font-bold text-green-600 mb-1">Gelombang Kedua</p>
+                            <p class="text-gray-700">01 Juni 2025 - 01 Agustus 2025</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Tempat Pendaftaran</h3>
+                    <div class="bg-white p-4 rounded-lg">
+                        <p class="text-gray-700 leading-relaxed">
+                            Kantor Sekretariat<br>
+                            <span class="font-bold text-green-600">Pondok Pesantren Nurul Yaqin</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-lg p-8 mb-8">
+                <h3 class="text-2xl font-bold text-gray-800 mb-6">Rincian Biaya Pendaftaran</h3>
+                <ul class="space-y-4 text-gray-700">
+                    <li class="flex flex-wrap justify-between border-b pb-3">
+                        <span>Uang Pendaftaran</span>
+                        <span class="font-semibold text-gray-800">Rp. 150.000</span>
+                    </li>
+                    <li class="flex flex-wrap justify-between border-b pb-3">
+                        <span>Uang Pembangunan</span>
+                        <span class="font-semibold text-gray-800">Rp. 200.000 / Tahun</span>
+                    </li>
+                    <li class="flex flex-wrap justify-between border-b pb-3">
+                        <span>Uang Listrik</span>
+                        <span class="font-semibold text-gray-800">Rp. 100.000 / Tahun</span>
+                    </li>
+                    <li class="flex flex-wrap justify-between border-b pb-3">
+                        <span>SPP</span>
+                        <span class="font-semibold text-gray-800">Rp. 50.000 / Bulan</span>
+                    </li>
+                    <li class="flex flex-wrap justify-between border-b pb-3">
+                        <span>Uang Badan Eksekutif Santri (BES)</span>
+                        <span class="font-semibold text-gray-800">Rp. 50.000 / Tahun</span>
+                    </li>
+                    <li class="flex flex-wrap justify-between border-b pb-3">
+                        <span>Uang Asrama (Khusus Santriwati)</span>
+                        <span class="font-semibold text-gray-800">Rp. 20.000 / Bulan</span>
+                    </li>
+                </ul>
+                <div class="mt-6 pt-6 border-t-2 border-green-500 space-y-2">
+                    <p class="text-lg font-bold text-gray-800 flex justify-between">
+                        <span>Jumlah Keseluruhan (Santri)</span>
+                        <span class="text-green-600">Rp. 550.000</span>
+                    </p>
+                    <p class="text-lg font-bold text-gray-800 flex justify-between">
+                        <span>Jumlah Keseluruhan (Santriwati)</span>
+                        <span class="text-green-600">Rp. 570.000</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+                <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Persyaratan PPDB MTs</h3>
+                    <ul class="space-y-2 text-gray-700 list-inside">
+                        <li class="flex items-center"><span class="text-green-600 mr-2">✔</span>Photocopy Surat
+                            Keterangan Lulus (SKL) 1 Lembar</li>
+                        <li class="flex items-center"><span class="text-green-600 mr-2">✔</span>Photocopy KK 1 Lembar
+                        </li>
+                        <li class="flex items-center"><span class="text-green-600 mr-2">✔</span>Pas Photo 3x4 (2 Lembar)
+                        </li>
+                        <li class="flex items-center"><span class="text-green-600 mr-2">✔</span>Map Portopolio 1 Lembar
+                        </li>
+                        <li class="flex items-center"><span class="text-green-600 mr-2">✔</span>Uang Pendaftaran: Rp.
+                            50.000</li>
+                        <li class="flex items-center"><span class="text-green-600 mr-2">✔</span>Uang Kas : 50.000</li>
+                        <li class="flex items-center"><span class="text-green-600 mr-2">✔</span>Surat Mutasi Pindah dan
+                            SKB (Bagi Pindahan)</li>
+                    </ul>
+                </div>
+                <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Persyaratan PPDB MA</h3>
+                    <ul class="space-y-2 text-gray-700 list-inside">
+                        <li class="flex items-center"><span class="text-green-600 mr-2">✔</span>Photocopy Ijazah
+                            Terakhir/SKHU SLTP 3 Lembar</li>
+                        <li class="flex items-center"><span class="text-green-600 mr-2">✔</span>Photocopy KK 3 Lembar
+                        </li>
+                        <li class="flex items-center"><span class="text-green-600 mr-2">✔</span>Pas Photo 3x4 (3 Lembar)
+                        </li>
+                        <li class="flex items-center"><span class="text-green-600 mr-2">✔</span>Uang Pendaftaran: Rp.
+                            100.000</li>
+                        <li class="flex items-center"><span class="text-green-600 mr-2">✔</span>Uang Rapor : 50.000</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-lg p-8 mb-8">
+                <h3 class="text-2xl font-bold text-gray-800 mb-6">Ketentuan Umum</h3>
+                <div class="space-y-3">
+                    <div class="flex items-start">
+                        <span
+                            class="bg-green-500 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm font-bold mr-3 mt-0.5 flex-shrink-0">1</span>
+                        <p class="text-gray-700">Pondok Pesantren Nurul Yaqin Merupakan Satu Wadah Lembaga Pendidikan
+                            Islam Yang Dihuni Oleh Majelis Guru Dan Santri Di Bawah Naungan Dan Pengawasan Pimpinan
+                            Pondok Pesantren.</p>
+                    </div>
+                    <div class="flex items-start">
+                        <span
+                            class="bg-green-500 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm font-bold mr-3 mt-0.5 flex-shrink-0">2</span>
+                        <p class="text-gray-700">Dewan Guru Dan Santri Adalah Berasal Dari Komponen Masyarakat Yang
+                            Beragama Islam Dan Tidak Ditentukan Batas Usia, Daerah Dan Suku.</p>
+                    </div>
+                    <div class="flex items-start">
+                        <span
+                            class="bg-green-500 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm font-bold mr-3 mt-0.5 flex-shrink-0">3</span>
+                        <p class="text-gray-700">Bersedia Bagi Santri Tinggal Menetap Serta Mengikuti Peraturan Dan
+                            Ketertiban Yang Berlaku Di Ma’had.</p>
+                    </div>
+                    <div class="flex items-start">
+                        <span
+                            class="bg-green-500 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm font-bold mr-3 mt-0.5 flex-shrink-0">4</span>
+                        <p class="text-gray-700">Santri & Santrawati Yang Melakukan Pelanggaran, Wajib Bersedia Menerima
+                            Sanksi Yang Berlaku Di Pondok Serta Tidak Menuntutnya Ke Ranah Hukum.</p>
+                    </div>
+                    <div class="flex items-start">
+                        <span
+                            class="bg-green-500 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm font-bold mr-3 mt-0.5 flex-shrink-0">5</span>
+                        <p class="text-gray-700">Santri & Santriwati Terhitung Dari Kelas I Hingga Kelas VII.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-lg p-8 mb-8">
+                <h3 class="text-2xl font-bold text-gray-800 mb-6">Kewajiban Santri & Santriwati</h3>
+                <div class="space-y-3">
+                    <div class="flex items-start"><span
+                            class="bg-green-500 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm font-bold mr-3 mt-0.5 flex-shrink-0">1</span>
+                        <p class="text-gray-700">Memiliki Kartu Tanda Santri (KTS).</p>
+                    </div>
+                    <div class="flex items-start"><span
+                            class="bg-green-500 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm font-bold mr-3 mt-0.5 flex-shrink-0">2</span>
+                        <p class="text-gray-700">Memiliki Semua Perlengkapan Belajar.</p>
+                    </div>
+                    <div class="flex items-start"><span
+                            class="bg-green-500 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm font-bold mr-3 mt-0.5 flex-shrink-0">3</span>
+                        <p class="text-gray-700">Mengikuti Semua Jam Pelajaran Dengan Rutin Pada Waktu Yang Telah
+                            Ditentukan.</p>
+                    </div>
+                    <div class="flex items-start"><span
+                            class="bg-green-500 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm font-bold mr-3 mt-0.5 flex-shrink-0">4</span>
+                        <p class="text-gray-700">Melaksanan Sholat Fardu Berjamaah Di Musholla Dan Tidak Keluar Sebelum
+                            Selesai Wirid.</p>
+                    </div>
+                    <div class="flex items-start"><span
+                            class="bg-green-500 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm font-bold mr-3 mt-0.5 flex-shrink-0">5</span>
+                        <p class="text-gray-700">Bagi Santriwati Diwajibkan Memakai Baju Dan Jilbab Yang Panjang Serta
+                            Anak Jilbab Dan Juga Kaos Kaki Pada Waktu Belajar.</p>
+                    </div>
+                    <div class="flex items-start"><span
+                            class="bg-green-500 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm font-bold mr-3 mt-0.5 flex-shrink-0">6</span>
+                        <p class="text-gray-700">Mengikuti Seluruh Kegiatan Yang Telah Ditetapkan Oleh Pondok Dengan
+                            Penuh Kedisiplinan Seperti: Belajar, Sholat Berjamaah, Muthola’ah, Latihan Pidato, Latihan
+                            Khutbah, Latihan Barzanji, Baca Maulid, Talaqqi Al-Qur’an Dan Lain-Lain.</p>
+                    </div>
+                    <div class="flex items-start"><span
+                            class="bg-green-500 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm font-bold mr-3 mt-0.5 flex-shrink-0">7</span>
+                        <p class="text-gray-700">Berada Di Dalam Kelas Setelah Masuk Waktu Belajar.</p>
+                    </div>
+                    <div class="flex items-start"><span
+                            class="bg-green-500 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm font-bold mr-3 mt-0.5 flex-shrink-0">8</span>
+                        <p class="text-gray-700">Menjaga Kebersihan, Ketertiban, Dan Keamanan Serta Keindahan Pondok
+                            Pesantren.</p>
+                    </div>
+                    <div class="flex items-start"><span
+                            class="bg-green-500 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm font-bold mr-3 mt-0.5 flex-shrink-0">9</span>
+                        <p class="text-gray-700">Bangun Pada Jam 4:00 Shubuh.</p>
+                    </div>
+                    <div class="flex items-start"><span
+                            class="bg-green-500 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm font-bold mr-3 mt-0.5 flex-shrink-0">10</span>
+                        <p class="text-gray-700">Memiliki Kartu Izin Santri Serta Membawanya Ketika Izin, Pulang Dan
+                            Kembali Ke Pondok.</p>
+                    </div>
+                    <div class="flex items-start"><span
+                            class="bg-green-500 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm font-bold mr-3 mt-0.5 flex-shrink-0">11</span>
+                        <p class="text-gray-700">Memakai Pakaian Yang Sopan, Memakai Peci Dan Kameja Di Saat Keluar
+                            Kawasan Pondok.</p>
+                    </div>
+                    <div class="flex items-start"><span
+                            class="bg-green-500 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm font-bold mr-3 mt-0.5 flex-shrink-0">12</span>
+                        <p class="text-gray-700">Bersedia Menerima Sanksi Yang Telah Ditetapkan Oleh Pondok Pesantren.
+                        </p>
+                    </div>
+                    <div class="flex items-start"><span
+                            class="bg-green-500 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm font-bold mr-3 mt-0.5 flex-shrink-0">13</span>
+                        <p class="text-gray-700">Wajib Memakai Seragam Waktu Belajar & Jamaah Maghrib Dan Isya (Baju,
+                            Kopiah Dan Sorban Putih).</p>
+                    </div>
+                    <div class="flex items-start"><span
+                            class="bg-green-500 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm font-bold mr-3 mt-0.5 flex-shrink-0">14</span>
+                        <p class="text-gray-700">Selain Maghrib & Isya Dibolehkan Memakai Baju Kemeja.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-green-50 rounded-2xl p-8 text-center border border-green-200">
+                <h3 class="text-2xl font-bold text-gray-800 mb-6">Contact Person</h3>
+                <p class="text-gray-700 mb-4">Untuk penjelasan lebih lanjut, silahkan hubungi:</p>
+                <div class="space-y-2 text-lg font-semibold text-green-700">
+                    <p>+20 115 863 6623</p>
+                    <p>+62 822 8219 6086</p>
+                    <p>+62 812 1235 0197</p>
+                </div>
+                <div class="mt-8 border-t border-green-200 pt-6">
+                    <h4 class="text-xl font-bold text-gray-800 mb-3">Baca Juga:</h4>
+                    <div class="space-x-4">
+                        <a href="#" class="text-green-600 hover:underline font-semibold">Tata Tertib Pondok</a>
+                        <a href="#" class="text-green-600 hover:underline font-semibold">Aktivitas Santri dan Santri
+                            Wati</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-gray-300 py-12 px-4">
+        <div class="max-w-7xl mx-auto text-center">
+            <span class="text-2xl font-bold text-white">PP Nurul Yaqin</span>
+            <p class="my-4">Membentuk generasi berakhlak mulia, berilmu, dan berprestasi.</p>
+            <div class="flex justify-center space-x-6">
+                <a href="#profil" class="hover:text-white">Profil</a>
+                <a href="#pendaftaran" class="hover:text-white">Pendaftaran</a>
+                <a href="#berita" class="hover:text-white">Berita</a>
+            </div>
+            <p class="mt-8 text-sm text-gray-400">
+                &copy; 2025 Pondok Pesantren Nurul Yaqin. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
+
+</body>
+
+</html>
