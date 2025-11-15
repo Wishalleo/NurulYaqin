@@ -38,25 +38,34 @@
 </head>
 
 <body class="scroll-smooth">
-    <nav class="bg-white shadow-md fixed w-full top-0 z-50">
+    <nav id="mainNav" class="bg-white shadow-md fixed w-full top-0 z-50 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center">
-                    <span class="text-2xl font-bold text-green-600">PP Nurul Yaqin</span>
+                    <a href="index.html">
+                        <img src="logo-panjang.png" alt="Logo PP Nurul Yaqin" class="h-10 w-25 mr-2">
+                    </a>
                 </div>
-                <div class="hidden md:flex items-center space-x-6">
-                    <a href="#profil" class="text-gray-700 hover:text-green-600 transition">Profil</a>
-                    <a href="#visi-misi" class="text-gray-700 hover:text-green-600 transition">Visi & Misi</a>
-                    <a href="#prestasi" class="text-gray-700 hover:text-green-600 transition">Prestasi</a>
-                    <a href="#berita" class="text-gray-700 hover:text-green-600 transition">Berita</a>
-
-                    <a href="info-pendaftaran.html" class="text-gray-700 hover:text-green-600 transition">Info
+                <div id="navLinksContainer" class="hidden md:flex items-center space-x-6">
+                    <a href="#profil"
+                        class="nav-link text-black hover:text-green-200 transition-all duration-300 border-b-2 border-transparent">Profil</a>
+                    <a href="#visi-misi"
+                        class="nav-link text-black hover:text-green-200 transition-all duration-300 border-b-2 border-transparent">Visi
+                        &
+                        Misi</a>
+                    <a href="#prestasi"
+                        class="nav-link text-black hover:text-green-200 transition-all duration-300 border-b-2 border-transparent">Prestasi</a>
+                    <a href="#berita"
+                        class="nav-link text-black hover:text-green-200 transition-all duration-300 border-b-2 border-transparent">Berita</a>
+                    <a href="info-pendaftaran.html"
+                        class="text-black hover:text-green-200 transition-all duration-300 border-b-2 border-transparent">Info
                         Pendaftaran</a>
 
-                    <a href="#pendaftaran"
-                        class="bg-green-500 text-white px-5 py-2 rounded-full hover:bg-green-600 transition">Daftar</a>
+                    <a id="navLoginButton" href="#"
+                        class="bg-green-500 text-white px-5 py-2 rounded-full hover:bg-green-600 transition">Login</a>
                 </div>
-                <button onclick="toggleMenu()" class="md:hidden text-gray-700">
+                <button id="navMobileButton" onclick="toggleMenu()"
+                    class="md:hidden text-white transition-colors duration-300">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M4 6h16M4 12h16M4 18h16"></path>
@@ -65,18 +74,21 @@
             </div>
         </div>
 
-        <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
+        <div id="mobileMenu"
+            class="hidden md:hidden bg-green-700 border-t border-green-600 transition-colors duration-300">
             <div class="px-2 pt-2 pb-3 space-y-1">
                 <a href="#profil" onclick="toggleMenu()"
-                    class="block px-3 py-2 text-gray-700 hover:bg-green-50 rounded">Profil</a>
+                    class="block px-3 py-2 text-white hover:bg-green-600 rounded">Profil</a>
                 <a href="#visi-misi" onclick="toggleMenu()"
-                    class="block px-3 py-2 text-gray-700 hover:bg-green-50 rounded">Visi & Misi</a>
+                    class="block px-3 py-2 text-white hover:bg-green-600 rounded">Visi & Misi</a>
                 <a href="#prestasi" onclick="toggleMenu()"
-                    class="block px-3 py-2 text-gray-700 hover:bg-green-50 rounded">Prestasi</a>
+                    class="block px-3 py-2 text-white hover:bg-green-600 rounded">Prestasi</a>
                 <a href="#berita" onclick="toggleMenu()"
-                    class="block px-3 py-2 text-gray-700 hover:bg-green-50 rounded">Berita</a>
-                <a href="#pendaftaran" onclick="toggleMenu()"
-                    class="block px-3 py-2 bg-green-500 text-white text-center rounded-full">Daftar</a>
+                    class="block px-3 py-2 text-white hover:bg-green-600 rounded">Berita</a>
+                <a href="info-pendaftaran.html" onclick="toggleMenu()"
+                    class="block px-3 py-2 text-white hover:bg-green-600 rounded">Info Pendaftaran</a>
+                <a href="#" onclick="toggleMenu()"
+                    class="block px-3 py-2 bg-blue-600 text-white text-center rounded-full">Login</a>
             </div>
         </div>
     </nav>
@@ -386,13 +398,6 @@
         </div>
     </footer>
 
-
-    <script>
-        function toggleMenu() {
-            const menu = document.getElementById('mobileMenu');
-            menu.classList.toggle('hidden');
-        }
-    </script>
 
 </body>
 
